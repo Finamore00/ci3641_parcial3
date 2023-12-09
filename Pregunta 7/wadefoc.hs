@@ -4,7 +4,8 @@ import Data.List
 fibonacciChola :: Integer -> Integer
 fibonacciChola = fibAux 1 0 where
     fibAux :: Integer -> Integer -> Integer -> Integer
-    fibAux x y k = if k == 0 then x else fibAux (x+y) x (k-1)
+    fibAux _ _ 0 = 0
+    fibAux x y k = if k == 1 then x else fibAux (x+y) x (k-1)
 
 wadefoc :: Integer -> Integer
 wadefoc n = fibonacciChola chorizo where
