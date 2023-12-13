@@ -13,7 +13,7 @@ mpz_int fibonacci(mpz_int n) {
 }
 
 mpf_float my_log2(mpf_float x) {
-    return boost::math::log1p(x-1)/boost::math::log1p(1);
+    return boost::math::log1p(x-1)/boost::math::log1p(1); //log1p(x) toma logaritmo natural de x+1
 }
 
 mpz_int wadefoc(mpz_int n) {
