@@ -5,7 +5,6 @@
 using namespace boost::multiprecision;
 
 mpz_int fib_aux(mpz_int x, mpz_int y, mpz_int k) {
-    mpz_int p_res;
     return (k == 0 ? 0 : (k == 1 ? x : fib_aux(x+y, x, k-1)));
 }
 
