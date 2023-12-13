@@ -117,3 +117,29 @@ Muestra un error genérico de error en el ingreso del comando
 func PrintGenericCmdError() {
 	fmt.Println("El comando ingresado es desconocido. Para ver información de comandos, ver 'help'")
 }
+
+/*
+Función que recibe un slice de strings e indica si todos los valores dentro del mismo son distintos
+*/
+func AllDifferent(arr []string) bool {
+	strMap := map[string]bool{}
+
+	for _, e := range arr {
+		v := strMap[e]
+		if v {
+			return false
+		} else {
+			strMap[e] = true
+		}
+	}
+
+	return true
+}
+
+/*
+Funcion que indica al usuario que hay valores repetidos en el listado de metodos ingresado
+*/
+func PrintRepeatedMethodErr() {
+	fmt.Println("Hay métodos repetidos en la lista de métodos proveída para la clase.")
+	fmt.Println("Por favor asegurarse de que al momento de definir una clase todos sus métodos tengan identificadores distintos.")
+}

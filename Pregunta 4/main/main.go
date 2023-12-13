@@ -62,6 +62,11 @@ func main() {
 				superClass = classTable[superClassName]
 			}
 
+			if !clientUtils.AllDifferent(methods) {
+				clientUtils.PrintRepeatedMethodErr()
+				continue
+			}
+
 			newClass := simulatorFuncs.NewClass(name, superClass, methods)
 			classTable[name] = &newClass
 
